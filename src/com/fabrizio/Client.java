@@ -11,4 +11,24 @@ public class Client {
     private int phoneNumber;
     private int roomNumber;
     private String roomType;
+
+    public Client(String firstName, String lastName, int phoneNumber, String roomType ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.roomType = roomType;
+
+    }
+
+    public void makePayment(){
+
+    }
+
+    public void chargeRoom(){
+
+    }
+
+    public void getOutstanding(){
+
+    }
 }
