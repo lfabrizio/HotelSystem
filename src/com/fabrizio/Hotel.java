@@ -1,13 +1,12 @@
 package com.fabrizio;
 
+import java.util.List;
+
 public class Hotel {
     String name;
     int rooms;
-    int availableStandards;
-    String reservedStandards;
-    int availableSuites;
-    String reservedSuites;
-    String clients;
+
+    private List<Client> clients;
 
     public Hotel(){
 
