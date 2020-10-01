@@ -4,13 +4,16 @@ public class Client {
     private String name;
     private String firstName;
     private String lastName;
-    private String middleName;
     private String clientId;
     private float currentBill;
-    private String prePaid;
+    private float prePaid;
     private int phoneNumber;
     private int roomNumber;
     private String roomType;
+
+    public Client(){
+        //empty constructor
+    }
 
     public Client(String firstName, String lastName, int phoneNumber, String roomType ){
         this.firstName = firstName;
@@ -20,15 +23,40 @@ public class Client {
 
     }
 
-    public void makePayment(){
-
+    public float makePayment(float payment){
+        prePaid += payment;
+        return prePaid;
     }
 
-    public void chargeRoom(){
-
+    public float chargeRoom(float chargedFee){
+        currentBill += chargedFee;
+        return currentBill;
     }
 
-    public void getOutstanding(){
-
+    public float getOutstanding(){
+        return currentBill;
     }
+
+    // add getters and setters
+    public String getName(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        name= firstName + lastName;
+        return name;
+    }
+
+    public void setName(){
+        this.name = name;
+    }
+
+    public int getPhoneNumber(){
+        return phoneNumber;
+    }
+    // this needs to be corrected
+    public void setPhoneNumber(int phoneNumber){
+        this.phoneNumber = phoneNumber; // this needs to be corrected
+    }
+
+
+
 }
