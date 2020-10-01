@@ -3,9 +3,9 @@ package com.fabrizio;
 public class Hotel {
     String name;
     int rooms;
-    String availableStandards;
+    int availableStandards;
     String reservedStandards;
-    String availableSuites;
+    int availableSuites;
     String reservedSuites;
     String clients;
 
@@ -27,6 +27,16 @@ public class Hotel {
 
     public void getClientBalance(){
 
+    }
+
+    // getters maybe just whats available
+
+    public int getStandardRoomsAvailable(){
+        return availableStandards;
+    }
+
+    public int getAvailableSuites(){
+        return availableSuites;
     }
 
 

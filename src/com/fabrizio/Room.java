@@ -18,7 +18,9 @@ public class Room {
     }
 
     public void reserve(String roomType, int rooms, int beds){
-
+        this.roomType=roomType;
+        this.rooms = rooms;
+        this.beds = beds;
     }
 
     public void reserve(){
@@ -33,4 +35,24 @@ public class Room {
 
     }
 
+    // getters and setters
+    public boolean occupied(){
+        return isOccupied;
+    }
+
+    public String getRoomType(){
+        return roomType;
+    }
+
+    public int getFloor(){
+        return floor;
+    }
+
+    public int getRooms(){
+        return rooms;
+    }
+
+    public int getBeds(){
+        return beds;
+    }
 }
