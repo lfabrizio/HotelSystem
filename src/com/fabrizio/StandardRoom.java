@@ -1,4 +1,8 @@
 package com.fabrizio;
 
-public class StandardRoom {
+import java.util.Stack;
+
+public class StandardRoom  {
+//inherit 
+
 }
