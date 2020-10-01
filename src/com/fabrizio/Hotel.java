@@ -21,9 +21,6 @@ public class Hotel {
 
     }
 
-    public void checkout(){
-
-    }
 
     public void getClientBalance(){
 

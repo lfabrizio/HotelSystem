@@ -17,22 +17,27 @@ public class Room {
         this.occupant = occupant;
     }
 
-    public void reserve(String roomType, int rooms, int beds){
-        this.roomType=roomType;
-        this.rooms = rooms;
-        this.beds = beds;
+    public boolean reserve(String occupant) {
+        this.occupant = occupant;
+        this.isOccupied = true;
+        if (this.isOccupied && !this.needsCleaning) {
+            System.out.println("Room is unavailable at this time");
+        } else {
+            System.out.println("This room is now reserved!");
+            return true;
+        }
+        return false;
     }
 
-    public void reserve(){
-
-    }
 
     public void checkout(){
-
+    this.occupant = null;
+    this.isOccupied = false;
+        System.out.println("this room is now vacant");
     }
 
-    public void needsCleaning(){
-
+    public boolean needsCleaning(){
+            return needsCleaning;
     }
 
     // getters and setters
