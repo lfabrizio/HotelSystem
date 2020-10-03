@@ -8,8 +8,9 @@ public class StandardRoom extends Room {
     private int rooms;
     private int beds;
 
-    public StandardRoom(){
-        super()
+    public StandardRoom(String roomNumber, String roomType, int floor, double avgPrice, int rooms, int beds) {
+        super(roomNumber, roomType, floor, avgPrice);
+        this.rooms = rooms;
+        this.beds = beds;
     }
-
 }

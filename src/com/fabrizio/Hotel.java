@@ -1,16 +1,25 @@
 package com.fabrizio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
-    String name;
-    int rooms;
+    private String hotelName;
+    private int rooms;
+    private List<StandardRoom> availableStandards;
+    private List<StandardRoom> reservedStandards;
+    private List<SuiteRoom> availableSuites;
+    private List<SuiteRoom> reservedSuites;
     private List<Client> clients;
-    private List<Room> standardRooms;
-    private List <Room> suiteRooms;
 
-    public Hotel(){
-
+    public Hotel(String hotelName, int rooms) {
+        this.hotelName = hotelName;
+        this.rooms = rooms;
+        this.availableStandards = new ArrayList<StandardRoom>();
+        this.reservedStandards = new ArrayList<StandardRoom>();
+        this.availableSuites = new ArrayList<SuiteRoom>();
+        this.reservedSuites = new ArrayList<SuiteRoom>();
+        this.clients = new ArrayList<Client>();
     }
 
     public void addRoom(){

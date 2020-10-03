@@ -1,18 +1,18 @@
 package com.fabrizio;
 
 public class Room {
-    private int number;
+    private int roomNumber;
     private String roomType;
     private int floor;
     private boolean isOccupied = false;
     private boolean needsCleaning = false;
     private String occupant;
-    private int avgPrice;
+    private double avgPrice;
 
 
 //roomNumber, roomType and floor
-    public Room(int number, String roomType, int floor){
-        this.number = number;
+    public Room(int RoomNumber, String roomType, int floor){
+        this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.floor = floor;
     }
@@ -44,11 +44,11 @@ public class Room {
 
 
     public int getNumber() {
-        return number;
+        return roomNumber;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.roomNumber = number;
     }
 
     public String getRoomType() {
@@ -91,7 +91,7 @@ public class Room {
         this.occupant = occupant;
     }
 
-    public int getAvgPrice() {
+    public double getAvgPrice() {
         return avgPrice;
     }
 
