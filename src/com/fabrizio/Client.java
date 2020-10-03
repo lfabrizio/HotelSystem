@@ -4,6 +4,7 @@ public class Client {
     private String name;
     private String firstName;
     private String lastName;
+    private int partySize;
     private String clientId;
     private float currentBill;
     private float prePaid;
@@ -11,14 +12,13 @@ public class Client {
     private int roomNumber;
     private String roomType;
 
-    public Client(){
-        //empty constructor
-    }
 
-    public Client(String firstName, String lastName, int phoneNumber, String roomType ){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
+    public Client(String name, int partySize, float currentBill, float prePaid, int roomNumber, String roomType ){
+        this.name = name;
+        this.partySize = partySize;
+        this.currentBill = currentBill;
+        this.prePaid = prePaid;
+        this.roomNumber = roomNumber;
         this.roomType = roomType;
 
     }

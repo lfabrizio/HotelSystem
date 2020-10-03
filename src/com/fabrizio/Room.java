@@ -4,28 +4,27 @@ public class Room {
     private int number;
     private String roomType;
     private int floor;
-    private boolean isOccupied;
-    private boolean needsCleaning;
+    private boolean isOccupied = false;
+    private boolean needsCleaning = false;
     private String occupant;
     private int avgPrice;
-    private int rooms;
-    private int beds;
 
-    public Room(int number, int floor, String occupant){
+
+//roomNumber, roomType and floor
+    public Room(int number, String roomType, int floor){
         this.number = number;
+        this.roomType = roomType;
         this.floor = floor;
-        this.occupant = occupant;
     }
 
     public boolean reserve(String occupant) {
-        this.occupant = occupant;
-        this.isOccupied = true;
-        if (this.isOccupied && !this.needsCleaning) {
-            System.out.println("Room is unavailable at this time");
-        } else {
-            System.out.println("This room is now reserved!");
+        if(!this.isOccupied && !this.needsCleaning){
+            this.isOccupied = true;
+            this.occupant = occupant;
+          //  occupant.setCurrentBill(this.avgPrice);
             return true;
         }
+        System.out.println("Unavailable");
         return false;
     }
 
@@ -33,6 +32,7 @@ public class Room {
     public void checkout(){
     this.occupant = null;
     this.isOccupied = false;
+    this.needsCleaning = true;
         System.out.println("this room is now vacant");
     }
 
@@ -41,23 +41,61 @@ public class Room {
     }
 
     // getters and setters
-    public boolean occupied(){
-        return isOccupied;
+
+
+    public int getNumber() {
+        return number;
     }
 
-    public String getRoomType(){
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getRoomType() {
         return roomType;
     }
 
-    public int getFloor(){
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+    public int getFloor() {
         return floor;
     }
 
-    public int getRooms(){
-        return rooms;
+    public void setFloor(int floor) {
+        this.floor = floor;
     }
 
-    public int getBeds(){
-        return beds;
+    public boolean isOccupied() {
+        return isOccupied;
+    }
+
+    public void setOccupied(boolean occupied) {
+        isOccupied = occupied;
+    }
+
+    public boolean isNeedsCleaning() {
+        return needsCleaning;
+    }
+
+    public void setNeedsCleaning(boolean needsCleaning) {
+        this.needsCleaning = needsCleaning;
+    }
+
+    public String getOccupant() {
+        return occupant;
+    }
+
+    public void setOccupant(String occupant) {
+        this.occupant = occupant;
+    }
+
+    public int getAvgPrice() {
+        return avgPrice;
+    }
+
+    public void setAvgPrice(int avgPrice) {
+        this.avgPrice = avgPrice;
     }
 }
