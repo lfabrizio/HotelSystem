@@ -10,7 +10,7 @@ public class SuiteRoom extends Room {
 
 
     public SuiteRoom(String roomNumber, String roomType, int floor, double avgPrice, String rooms, String beds, int partySize, boolean kitchenette) {
-        super(roomNumber, roomType, floor, avgPrice);
+        super(roomNumber, roomType, floor);
         this.rooms = rooms;
         this.beds = beds;
         this.partySize = partySize;

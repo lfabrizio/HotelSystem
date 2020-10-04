@@ -9,7 +9,7 @@ public class StandardRoom extends Room {
     private int beds;
 
     public StandardRoom(String roomNumber, String roomType, int floor, double avgPrice, int rooms, int beds) {
-        super(roomNumber, roomType, floor, avgPrice);
+        super(roomNumber, roomType, floor);
         this.rooms = rooms;
         this.beds = beds;
     }

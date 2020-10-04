@@ -1,18 +1,17 @@
 package com.fabrizio;
 
 public class Room {
-    private int roomNumber;
+    private String roomNumber;
     private String roomType;
     private int floor;
     private boolean isOccupied = false;
     private boolean needsCleaning = false;
-    private String occupant;
+    private String occupant; //check this
     private double avgPrice;
 
 
 //roomNumber, roomType and floor
-    public Room(int RoomNumber, String roomType, int floor){
-        this.roomNumber = roomNumber;
+    public Room(String RoomNumber, String roomType, int floor){
         this.roomType = roomType;
         this.floor = floor;
     }
@@ -21,7 +20,7 @@ public class Room {
         if(!this.isOccupied && !this.needsCleaning){
             this.isOccupied = true;
             this.occupant = occupant;
-          //  occupant.setCurrentBill(this.avgPrice);
+          // occupant.setCurrentBill(this.avgPrice); in client
             return true;
         }
         System.out.println("Unavailable");
@@ -43,12 +42,12 @@ public class Room {
     // getters and setters
 
 
-    public int getNumber() {
+    public String getNumber() {
         return roomNumber;
     }
 
     public void setNumber(int number) {
-        this.roomNumber = number;
+        this.roomNumber = roomNumber;
     }
 
     public String getRoomType() {
