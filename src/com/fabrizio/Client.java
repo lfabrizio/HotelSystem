@@ -6,7 +6,7 @@ public class Client {
     private String lastName;
     private int partySize;
     private String clientId;
-    private float currentBill;
+    private double currentBill;
     private float prePaid;
     private int phoneNumber;
     private int roomNumber;
@@ -28,12 +28,12 @@ public class Client {
         return prePaid;
     }
 
-    public float chargeRoom(float chargedFee){
+    public double chargeRoom(float chargedFee){
         currentBill += chargedFee;
         return currentBill;
     }
 
-    public float getOutstanding(){
+    public double getOutstanding(){
         return currentBill;
     }
 
@@ -57,6 +57,12 @@ public class Client {
         this.phoneNumber = phoneNumber; // this needs to be corrected
     }
 
+    public double getCurrentBill() {
+        return currentBill;
+    }
 
+    public void setCurrentBill(double currentBill) {
+        this.currentBill = currentBill;
+    }
 
 }

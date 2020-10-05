@@ -6,7 +6,7 @@ public class Room {
     private int floor;
     private boolean isOccupied = false;
     private boolean needsCleaning = false;
-    private String occupant; //check this
+    private Client occupant; //check this
     private double avgPrice;
 
 
@@ -16,11 +16,11 @@ public class Room {
         this.floor = floor;
     }
 
-    public boolean reserve(String occupant) {
+    public boolean reserve(Client occupant) {
         if(!this.isOccupied && !this.needsCleaning){
             this.isOccupied = true;
             this.occupant = occupant;
-          // occupant.setCurrentBill(this.avgPrice); in client
+           occupant.setCurrentBill(this.avgPrice); //in client
             return true;
         }
         System.out.println("Unavailable");
