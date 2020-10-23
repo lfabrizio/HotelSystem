@@ -6,14 +6,15 @@ public class Room {
     private int floor;
     private boolean isOccupied = false;
     private boolean needsCleaning = false;
-    private Client occupant; //check this
+    private Client occupant;
     private double avgPrice;
 
 
 //roomNumber, roomType and floor
-    public Room(String RoomNumber, String roomType, int floor){
+    public Room(String RoomNumber, String roomType, int floor, float avgPrice){
         this.roomType = roomType;
         this.floor = floor;
+        this.avgPrice = avgPrice;
     }
 
     public boolean reserve(Client occupant) {
@@ -32,7 +33,7 @@ public class Room {
     this.occupant = null;
     this.isOccupied = false;
     this.needsCleaning = true;
-        System.out.println("this room is now vacant");
+        System.out.println("This Room is Now Vacant");
     }
 
     public boolean needsCleaning(){
@@ -82,11 +83,11 @@ public class Room {
         this.needsCleaning = needsCleaning;
     }
 
-    public String getOccupant() {
+    public Client getOccupant() {
         return occupant;
     }
 
-    public void setOccupant(String occupant) {
+    public void setOccupant(Client occupant) {
         this.occupant = occupant;
     }
 
@@ -96,5 +97,18 @@ public class Room {
 
     public void setAvgPrice(int avgPrice) {
         this.avgPrice = avgPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomNumber='" + roomNumber + '\'' +
+                ", roomType='" + roomType + '\'' +
+                ", floor=" + floor +
+                ", isOccupied=" + isOccupied +
+                ", needsCleaning=" + needsCleaning +
+                ", occupant=" + occupant +
+                ", avgPrice=" + avgPrice +
+                '}';
     }
 }

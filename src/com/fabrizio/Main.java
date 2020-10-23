@@ -3,7 +3,9 @@ package com.fabrizio;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("***Welcome to the Hotel***");
-
+        Hotel.welcome("Hotel RI");
+        Hotel HotelRI = new Hotel("Hotel RI", 50);
+        Client Lou = new Client("Lou", 2, "Standard");
+        // add room
     }
 }

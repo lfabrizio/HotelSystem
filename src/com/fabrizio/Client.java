@@ -7,23 +7,20 @@ public class Client {
     private int partySize;
     private String clientId;
     private double currentBill;
-    private float prePaid;
-    private int phoneNumber;
-    private int roomNumber;
+    private double prePaid;
+    private String phoneNumber;
+    private String roomNumber;
     private String roomType;
 
 
-    public Client(String name, int partySize, float currentBill, float prePaid, int roomNumber, String roomType ){
+    public Client(String name, int partySize,  String roomType ){
         this.name = name;
         this.partySize = partySize;
-        this.currentBill = currentBill;
-        this.prePaid = prePaid;
-        this.roomNumber = roomNumber;
         this.roomType = roomType;
 
     }
 
-    public float makePayment(float payment){
+    public double makePayment(double payment){
         prePaid += payment;
         return prePaid;
     }
@@ -34,6 +31,7 @@ public class Client {
     }
 
     public double getOutstanding(){
+
         return currentBill;
     }
 
@@ -49,11 +47,11 @@ public class Client {
         this.name = name;
     }
 
-    public int getPhoneNumber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
     // this needs to be corrected
-    public void setPhoneNumber(int phoneNumber){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber; // this needs to be corrected
     }
 
@@ -61,8 +59,10 @@ public class Client {
         return currentBill;
     }
 
+
     public void setCurrentBill(double currentBill) {
-        this.currentBill = currentBill;
+       this.currentBill = currentBill;
     }
 
+        // need to implement a toString method for name and phone number
 }

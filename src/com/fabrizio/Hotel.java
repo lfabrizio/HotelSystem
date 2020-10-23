@@ -35,7 +35,12 @@ public class Hotel {
 
     }
 
-    // getters maybe just whats available
+    static public void welcome(String hotelName) {
+
+        System.out.print("Welcome to " + hotelName);
+        System.out.println("\n");
+    }
+        // getters maybe just whats available
 
 //    public int getStandardRoomsAvailable(){
 //        return availableStandards;
