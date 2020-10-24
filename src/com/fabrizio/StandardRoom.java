@@ -38,6 +38,11 @@ public class StandardRoom extends Room {
         this.beds = beds;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "StandardRoom{" +
+                "rooms=" + rooms +
+                ", beds=" + beds +
+                '}';
+    }
 }

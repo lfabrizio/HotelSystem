@@ -11,7 +11,7 @@ public class Room {
 
 
 //roomNumber, roomType and floor
-    public Room(int RoomNumber, String roomType, int floor, float avgPrice){
+    public Room(int roomNumber, String roomType, int floor, float avgPrice){
         this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.floor = floor;
