@@ -64,5 +64,13 @@ public class Client {
        this.currentBill = currentBill;
     }
 
-        // need to implement a toString method for name and phone number
+    public int getPartySize() {
+        return partySize;
+    }
+
+    public void setPartySize(int partySize) {
+        this.partySize = partySize;
+    }
+
+    // need to implement a toString method for name and phone number
 }

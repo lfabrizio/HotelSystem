@@ -9,8 +9,8 @@ public class SuiteRoom extends Room {
     private boolean needsRestock = false;
 
 
-    public SuiteRoom(String roomNumber, String roomType, int floor, double avgPrice, String rooms, String beds, int partySize, boolean kitchenette) {
-        super(roomNumber, roomType, floor);
+    public SuiteRoom(int roomNumber, String roomType, int floor, float avgPrice, String rooms, String beds, int partySize, boolean kitchenette) {
+        super(roomNumber, roomType, floor, avgPrice);
         this.rooms = rooms;
         this.beds = beds;
         this.partySize = partySize;

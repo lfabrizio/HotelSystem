@@ -1,7 +1,7 @@
 package com.fabrizio;
 
 public class Room {
-    private String roomNumber;
+    private int roomNumber;
     private String roomType;
     private int floor;
     private boolean isOccupied = false;
@@ -11,7 +11,8 @@ public class Room {
 
 
 //roomNumber, roomType and floor
-    public Room(String RoomNumber, String roomType, int floor, float avgPrice){
+    public Room(int RoomNumber, String roomType, int floor, float avgPrice){
+        this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.floor = floor;
         this.avgPrice = avgPrice;
@@ -37,13 +38,13 @@ public class Room {
     }
 
     public boolean needsCleaning(){
-            return needsCleaning;
+        return needsCleaning;
     }
 
     // getters and setters
 
 
-    public String getNumber() {
+    public int getNumber() {
         return roomNumber;
     }
 
@@ -75,13 +76,6 @@ public class Room {
         isOccupied = occupied;
     }
 
-    public boolean isNeedsCleaning() {
-        return needsCleaning;
-    }
-
-    public void setNeedsCleaning(boolean needsCleaning) {
-        this.needsCleaning = needsCleaning;
-    }
 
     public Client getOccupant() {
         return occupant;
@@ -99,6 +93,7 @@ public class Room {
         this.avgPrice = avgPrice;
     }
 
+    // to print out to console
     @Override
     public String toString() {
         return "Room{" +
