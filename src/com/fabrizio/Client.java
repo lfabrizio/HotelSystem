@@ -13,11 +13,14 @@ public class Client {
     private String roomType;
 
 
+
     public Client(String name, int partySize,  String roomType ){
         this.name = name;
         this.partySize = partySize;
         this.roomType = roomType;
 
+        //balance after prepaid
+        this.currentBill -= prePaid;
     }
 
     public double makePayment(double payment){

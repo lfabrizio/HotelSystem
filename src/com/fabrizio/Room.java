@@ -38,6 +38,7 @@ public class Room {
     }
 
     public boolean needsCleaning(){
+
         return needsCleaning;
     }
 

@@ -22,17 +22,46 @@ public class Hotel {
         this.clients = new ArrayList<Client>();
     }
 
+    // method overloading
     public void addRoom(){
 
     }
 
     public void reserveRoom(){
-
+    
     }
 
 
     public void getClientBalance(){
 
+    }
+
+    public String getHotelName() {
+        return hotelName;
+    }
+
+    public int getRooms() {
+        return rooms;
+    }
+
+    public List<StandardRoom> getAvailableStandards() {
+        return availableStandards;
+    }
+
+    public List<StandardRoom> getReservedStandards() {
+        return reservedStandards;
+    }
+
+    public List<SuiteRoom> getAvailableSuites() {
+        return availableSuites;
+    }
+
+    public List<SuiteRoom> getReservedSuites() {
+        return reservedSuites;
+    }
+
+    public List<Client> getClients() {
+        return clients;
     }
 
     static public void welcome(String hotelName) {
